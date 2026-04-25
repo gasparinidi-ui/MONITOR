@@ -1,0 +1,23 @@
+PASSO A PASSO — PUBLICAR O BACKEND NA VERCEL
+
+1. Crie uma pasta separada com:
+   - `api/`
+   - `package.json`
+   - `vercel.json`
+   - `.env.example`
+
+2. Faça login:
+   vercel login
+
+3. Publique:
+   vercel
+
+4. Defina a chave do Finnhub:
+   vercel env add FINNHUB_API_KEY production
+
+5. Faça novo deploy:
+   vercel --prod
+
+6. Copie a URL final e coloque em:
+   data/app-config.json
+   campo: apiBaseUrl
