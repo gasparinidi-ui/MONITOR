@@ -67,3 +67,8 @@ Funções serverless:
 - O breadth de companhias depende da estrutura do BitcoinTreasuries.
 - Alguns campos de AUM/shares via Finnhub podem não vir para todos os tickers ou planos.
 - Para máxima confiabilidade, confirme eventos relevantes de companhias em IR / SEC.
+
+## Ajuste aplicado para Vercel
+- Removido o campo inválido `runtime` do `vercel.json`.
+- Adicionado `engines.node: 20.x` no `package.json`.
+- Mantido `maxDuration` nas funções da pasta `api/`.

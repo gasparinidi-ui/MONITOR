@@ -1,6 +1,6 @@
 PASSO A PASSO — PUBLICAR O BACKEND NA VERCEL
 
-1. Crie uma pasta separada com:
+1. Use a pasta inteira do projeto ou, no mínimo:
    - `api/`
    - `package.json`
    - `vercel.json`
@@ -18,6 +18,12 @@ PASSO A PASSO — PUBLICAR O BACKEND NA VERCEL
 5. Faça novo deploy:
    vercel --prod
 
-6. Copie a URL final e coloque em:
+6. Confirme em Project Settings que o Node.js está em 20.x (ou deixe o `package.json` controlar isso via `engines`).
+
+7. Copie a URL final e coloque em:
    data/app-config.json
    campo: apiBaseUrl
+
+OBSERVAÇÃO:
+- O `vercel.json` foi ajustado para não declarar runtime inválido em `functions.runtime`.
+- A versão do Node agora fica definida no `package.json` com `engines.node`.
